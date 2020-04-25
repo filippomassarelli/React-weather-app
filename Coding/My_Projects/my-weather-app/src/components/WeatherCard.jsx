@@ -3,7 +3,7 @@ import logo from "../images/02d.png";
 
 
 
-function WeatherCard(){
+function WeatherCard(props){
 
     const [weather, setWeather] = useState({
         city: "",
@@ -13,7 +13,7 @@ function WeatherCard(){
     });
 
     
-    const query = "Rome";
+    const query = props.city;
     const units = "metric";
     const apiKey = process.env.REACT_APP_API_KEY;
 
@@ -24,7 +24,6 @@ function WeatherCard(){
     const response = await fetch(url);
     const weatherData = await response.json();
 
-
     setWeather({      
         city : weatherData.name,
         description : weatherData.weather[0].description,
@@ -34,19 +33,13 @@ function WeatherCard(){
 
   }, [])
   
-  console.log([weather.iconURL]);
-  let iconURL = "http://openweathermap.org/img/wn/"+weather.iconCode+"@2x.png";
-  console.log(iconURL);
+  let iconURL = "http://openweathermap.org/img/wn/"+weather.iconCode+"@2x.png";  
 
   return (
       <div className="card">
           <h1>{weather.city}</h1>
           <img src= {iconURL} />
-
-
-
           <p>{weather.description} with a temperature of {weather.temperature}°C</p>
-
       </div>
   )
 
