@@ -6,13 +6,15 @@ import Search from "./Search"
 
 function App() {
 
-    const [requestedCity, setRequestedCity] = useState("Vienna");
+    const [requestedCity, setRequestedCity] = useState("London");
 
     function searchCity(passedCity){
         setRequestedCity(passedCity)
 
     }
 
+    console.log(requestedCity);
+    
 
     return (
         <div>

@@ -20,26 +20,33 @@ function WeatherCard(props){
     const url = "https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apiKey+"&units="+units;
 
 
-  useEffect( async () => {
-    const response = await fetch(url);
-    const weatherData = await response.json();
 
-    setWeather({      
-        city : weatherData.name,
-        description : weatherData.weather[0].description,
-        temperature : weatherData.main.temp,
-        iconCode : weatherData.weather[0].icon
-  });
+useEffect( () => {
+    async function fetchWeatherData() {
+        const response = await fetch(url);
+        const weatherData = await response.json();   
+        
+        setWeather({   
+            city: weatherData.city,   
+            description : weatherData.weather[0].description,
+            temperature : Math.round(weatherData.main.temp),
+            iconCode : weatherData.weather[0].icon
+      });
+    
+    }
+    fetchWeatherData();
+  }, [props.city])
 
-  }, [])
+
   
   let iconURL = "http://openweathermap.org/img/wn/"+weather.iconCode+"@2x.png";  
 
   return (
       <div className="card">
-          <h1>{weather.city}</h1>
+          <h1>{props.city}</h1>
           <img src= {iconURL} />
-          <p>{weather.description} with a temperature of {weather.temperature}°C</p>
+          <p>{weather.temperature}°C</p>
+          <p>Currently: {weather.description}</p>
       </div>
   )
 
