@@ -5,8 +5,9 @@ function Header() {
     return(
         <header>
             <h1>
-                <HdrWeakIcon /> React weatherApp
+                <HdrWeakIcon /> React weather
             </h1>
+            
         </header>
     )
 }

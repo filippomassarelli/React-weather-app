@@ -7,21 +7,26 @@
     font-family: "Roboto", sans-serif;
   }
   body {
-    background: #ffff;
-    background-image: url("https://www.transparenttextures.com/patterns/swirl.png");    
+    background: #F7F7F7;
+    /* background-image: url("https://www.transparenttextures.com/patterns/swirl.png");     */
     padding: 0 16px;
   }
 
-  
+  h1.city {
+    color: #282C33;
+    text-align: center;
+    margin-top: 2%;
+  }
+
   header {
-    background-color: #EC6E4C;
+    background-color: #20222A;
     margin: auto -16px;
     padding: 16px 32px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(209, 209, 209, 0.89);
   }
   
   header h1 {
-    color: #fff;
+    color: #61DAFB;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
   }
@@ -35,17 +40,18 @@
   }
   
   footer p {
-    color: #ccc;
+    color: #353B44;
   }
   .card {
-    background: #fff;
+    background: #FFFFFF;
     border-radius: 7px;
-    box-shadow: 0 2px 5px #ccc;
+    box-shadow: 0 1px 3px rgba(209, 209, 209, 0.89);
     padding: 10px;
     width: 240px;
     margin: 16px;
     float: left;
     text-align: center;
+    color: #282C33; 
   }
   .card h1 {
     font-size: 1.1em;
@@ -74,10 +80,10 @@
     position: relative;
     width: 480px;
     margin: 30px auto 20px auto;
-    background: #fff;
+    background: #FFFFFF;
     padding: 15px;
     border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    box-shadow: 0 1px 3px rgba(209, 209, 209, 0.89);
   }
   form.create-note input,
   form.create-note textarea {
@@ -93,14 +99,23 @@
     position: absolute;
     right: 4%;
     bottom: 22%;
-    background: #EC6E4C;
+    background: #61DAFB;
     color: #fff;
     border: none;
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(209, 209, 209, 0.89);
     cursor: pointer;
     outline: none;
   }
   
+  .joke {
+    padding: 1% 20%;
+    font-style: italic;
+  }
+
+  .copyright {
+    font-size: 1rem;
+    font-weight: 400;
+  }

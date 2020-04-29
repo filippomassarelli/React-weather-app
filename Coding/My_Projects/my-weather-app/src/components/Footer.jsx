@@ -8,7 +8,9 @@ function Footer() {
       <footer>
         <Joke />
         <br></br>
-        <p>Copyright ⓒ Filippo Massarelli {year}</p>
+        <p className="copyright">Copyright {year} ⓒ Filippo Massarelli</p>
+        <br></br>
+
       </footer>
     );
 }

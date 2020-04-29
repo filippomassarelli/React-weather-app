@@ -12,7 +12,7 @@ function Joke(){
   }, [])
 
   return (
-      <div>
+      <div className="joke">
           <p>{joke}</p>
       </div>
   )
